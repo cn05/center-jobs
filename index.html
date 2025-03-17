@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav
+      class="bg-white flex items-center justify-between shadow-2xl font-medium px-5 py-4 md:px-0 md:py-0"
+    >
+      <!-- Logo -->
+      <div class="md:ml-6">
+        <a href="" class="font-bold text-3xl md:text-4xl text-[#235a97]"
+          >CenterJobs</a
+        >
+      </div>
+
+      <!-- Menu -->
+      <div class="hidden md:flex gap-5 items-center text-xl">
+        <a href="" class="hover:text-[#235a97]">Home</a>
+        <a href="" class="hover:text-[#235a97] flex gap-0.5 items-center"
+          >Job<svg
+            class="-mr-1 size-5 text-gray-400"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <a href="" class="hover:text-[#235a97]">About</a>
+        <a href="" class="hover:text-[#235a97]">Contact</a>
+        <a
+          href=""
+          class="bg-[#3178c6] text-white py-5 px-6 flex items-center gap-1 font-medium hover:bg-[#235a97]"
+          >Post A Job
+          <img src="icons/arrow-small-right.svg" class="size-6 text-white"
+        /></a>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button
+        id="hamburger"
+        name="hamburger"
+        type="button"
+        class="absolute block right-4 md:hidden"
+      >
+        <span
+          class="transition duration-300 origin-top-left hamburger-line"
+        ></span>
+        <span class="transition duration-300 hamburger-line"></span>
+        <span
+          class="transition duration-300 origin-bottom-left hamburger-line"
+        ></span>
+      </button>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden flex-col space-y-3 bg-white shadow-2xl p-5 text-lg absolute top-16 left-0 right-0 z-10 md:hidden"
+      >
+        <a href="#" class="block text-center hover:text-[#235a97]">Home</a>
+        <a
+          href="#"
+          class="flex items-center justify-center text-center hover:text-[#235a97]"
+          >Job<svg
+            class="-mr-1 size-5 text-gray-400"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <a href="#" class="block text-center hover:text-[#235a97]">About</a>
+        <a href="#" class="block text-center hover:text-[#235a97]">Contact</a>
+        <a
+          href="#"
+          class="block bg-[#3178c6] text-white py-3 px-6 text-center font-medium hover:bg-[#235a97]"
+        >
+          Post A Job
+        </a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Search Start -->
+    <div
+      class="bg-[#3178c6] text-center h-auto py-10 flex flex-col items-center justify-center gap-5 px-4"
+    >
+      <h1 class="font-bold text-2xl md:text-4xl text-white text-center">
+        Search for job vacancies
+      </h1>
+      <form
+        class="flex flex-col md:flex-row items-center gap-3 w-full max-w-lg"
+      >
+        <input
+          type="text"
+          placeholder="Keyword"
+          class="bg-white p-3 rounded-full w-full md:w-2/3 text-sm md:text-base"
+        />
+        <button
+          class="bg-[#121212] text-white font-semibold px-6 md:px-8 py-2 rounded-full cursor-pointer hover:bg-gray-800"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+    <!-- Search End -->
+
+    <!-- Job List Start -->
+    <section class="py-20">
+      <div class="flex flex-col items-center gap-8">
+        <h1 class="text-center font-bold text-4xl">Job vacancies</h1>
+        <hr class="w-10/12 -mt-5 mx-auto text-[#959CA0]" />
+
+        <!-- Versi Desktop -->
+        <div
+          class="hidden md:flex border border-gray-200 w-full max-w-5xl shadow-xl mx-auto"
+        >
+          <div class="px-5 py-5 flex justify-between items-center w-full">
+            <div class="flex items-center gap-5">
+              <img src="/img/items-1.jpg" class="size-20 rounded-md" />
+              <div class="flex flex-col gap-5">
+                <h2 class="font-bold text-xl hover:text-[#3178c6]">
+                  <a href="">Software Engineer</a>
+                </h2>
+                <div class="flex items-center gap-5 text-[#333333]">
+                  <p class="icon-std">
+                    <img src="icons/location.svg" class="size-4" />Kabupaten
+                    Bekasi
+                  </p>
+                  <p class="icon-std">
+                    <img src="icons/clock.svg" class="size-4" />Full Time
+                  </p>
+                  <p class="icon-std">
+                    <img src="/icons/usd-circle.svg" class="size-4" />$80,000
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5 ml-auto">
+              <div
+                class="py-2 px-3 bg-[#3178c6] text-white font-semibold self-end hover:bg-[#235a97]"
+              >
+                <a href="">Apply Now</a>
+              </div>
+              <p class="text-sm icon-std text-[#333333]">
+                <img src="/icons/calendar.svg" class="size-4" /> Deadline: 20
+                April 2025
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Versi Mobile -->
+        <div
+          class="md:hidden flex flex-col gap-5 border border-gray-200 shadow-xl py-4 px-6 mx-4 sm:mx-6 w-[90%] sm:w-[95%] md:w-full"
+        >
+          <div class="flex items-center gap-5">
+            <img src="/img/items-1.jpg" class="size-20 rounded-md" />
+            <div>
+              <h2 class="font-bold text-xl hover:text-[#3178c6] mb-3">
+                <a href="">Software Engineer</a>
+              </h2>
+              <div class="flex flex-col gap-1 text-[#333333]">
+                <p class="icon-std">
+                  <img src="icons/location.svg" class="size-4" />Kabupaten
+                  Bekasi
+                </p>
+                <p class="icon-std">
+                  <img src="icons/clock.svg" class="size-4" />Full Time
+                </p>
+                <p class="icon-std">
+                  <img src="/icons/usd-circle.svg" class="size-4" />$80,000
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <div
+              class="py-2 px-3 text-center bg-[#3178c6] self-center text-white font-semibold hover:bg-[#235a97]"
+            >
+              <a href="">Apply Now</a>
+            </div>
+            <p class="text-sm icon-std text-[#333333] flex justify-center">
+              <img src="/icons/calendar.svg" class="size-4" /> Deadline: 20
+              April 2025
+            </p>
+          </div>
+        </div>
+
+        <!-- Versi Desktop -->
+        <div
+          class="hidden md:flex border border-gray-200 w-full max-w-5xl shadow-xl mx-auto"
+        >
+          <div class="px-5 py-5 flex justify-between items-center w-full">
+            <div class="flex items-center gap-5">
+              <img src="/img/items-1.jpg" class="size-20 rounded-md" />
+              <div class="flex flex-col gap-5">
+                <h2 class="font-bold text-xl hover:text-[#3178c6]">
+                  <a href="">Software Engineer</a>
+                </h2>
+                <div class="flex items-center gap-5 text-[#333333]">
+                  <p class="icon-std">
+                    <img src="icons/location.svg" class="size-4" />Kabupaten
+                    Bekasi
+                  </p>
+                  <p class="icon-std">
+                    <img src="icons/clock.svg" class="size-4" />Full Time
+                  </p>
+                  <p class="icon-std">
+                    <img src="/icons/usd-circle.svg" class="size-4" />$80,000
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5 ml-auto">
+              <div
+                class="py-2 px-3 bg-[#3178c6] text-white font-semibold self-end hover:bg-[#235a97]"
+              >
+                <a href="">Apply Now</a>
+              </div>
+              <p class="text-sm icon-std text-[#333333]">
+                <img src="/icons/calendar.svg" class="size-4" /> Deadline: 20
+                April 2025
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Versi Mobile -->
+        <div
+          class="md:hidden flex flex-col gap-5 border border-gray-200 shadow-xl py-4 px-6 mx-4 sm:mx-6 w-[90%] sm:w-[95%] md:w-full"
+        >
+          <div class="flex items-center gap-5">
+            <img src="/img/items-1.jpg" class="size-20 rounded-md" />
+            <div>
+              <h2 class="font-bold text-xl hover:text-[#3178c6] mb-3">
+                <a href="">Software Engineer</a>
+              </h2>
+              <div class="flex flex-col gap-1 text-[#333333]">
+                <p class="icon-std">
+                  <img src="icons/location.svg" class="size-4" />Kabupaten
+                  Bekasi
+                </p>
+                <p class="icon-std">
+                  <img src="icons/clock.svg" class="size-4" />Full Time
+                </p>
+                <p class="icon-std">
+                  <img src="/icons/usd-circle.svg" class="size-4" />$80,000
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <div
+              class="py-2 px-3 text-center bg-[#3178c6] self-center text-white font-semibold hover:bg-[#235a97]"
+            >
+              <a href="">Apply Now</a>
+            </div>
+            <p class="text-sm icon-std text-[#333333] flex justify-center">
+              <img src="/icons/calendar.svg" class="size-4" /> Deadline: 20
+              April 2025
+            </p>
+          </div>
+        </div>
+
+        <!-- Versi Desktop -->
+        <div
+          class="hidden md:flex border border-gray-200 w-full max-w-5xl shadow-xl mx-auto"
+        >
+          <div class="px-5 py-5 flex justify-between items-center w-full">
+            <div class="flex items-center gap-5">
+              <img src="/img/items-1.jpg" class="size-20 rounded-md" />
+              <div class="flex flex-col gap-5">
+                <h2 class="font-bold text-xl hover:text-[#3178c6]">
+                  <a href="">Software Engineer</a>
+                </h2>
+                <div class="flex items-center gap-5 text-[#333333]">
+                  <p class="icon-std">
+                    <img src="icons/location.svg" class="size-4" />Kabupaten
+                    Bekasi
+                  </p>
+                  <p class="icon-std">
+                    <img src="icons/clock.svg" class="size-4" />Full Time
+                  </p>
+                  <p class="icon-std">
+                    <img src="/icons/usd-circle.svg" class="size-4" />$80,000
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5 ml-auto">
+              <div
+                class="py-2 px-3 bg-[#3178c6] text-white font-semibold self-end hover:bg-[#235a97]"
+              >
+                <a href="">Apply Now</a>
+              </div>
+              <p class="text-sm icon-std text-[#333333]">
+                <img src="/icons/calendar.svg" class="size-4" /> Deadline: 20
+                April 2025
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Versi Mobile -->
+        <div
+          class="md:hidden flex flex-col gap-5 border border-gray-200 shadow-xl py-4 px-6 mx-4 sm:mx-6 w-[90%] sm:w-[95%] md:w-full"
+        >
+          <div class="flex items-center gap-5">
+            <img src="/img/items-1.jpg" class="size-20 rounded-md" />
+            <div>
+              <h2 class="font-bold text-xl hover:text-[#3178c6] mb-3">
+                <a href="">Software Engineer</a>
+              </h2>
+              <div class="flex flex-col gap-1 text-[#333333]">
+                <p class="icon-std">
+                  <img src="icons/location.svg" class="size-4" />Kabupaten
+                  Bekasi
+                </p>
+                <p class="icon-std">
+                  <img src="icons/clock.svg" class="size-4" />Full Time
+                </p>
+                <p class="icon-std">
+                  <img src="/icons/usd-circle.svg" class="size-4" />$80,000
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <div
+              class="py-2 px-3 text-center bg-[#3178c6] self-center text-white font-semibold hover:bg-[#235a97]"
+            >
+              <a href="">Apply Now</a>
+            </div>
+            <p class="text-sm icon-std text-[#333333] flex justify-center">
+              <img src="/icons/calendar.svg" class="size-4" /> Deadline: 20
+              April 2025
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="py-3 px-5 bg-[#3178c6] text-white font-semibold hover:bg-[#235a97]"
+        >
+          <a href="">Explore More</a>
+        </div>
+      </div>
+    </section>
+    <!-- Job List End -->
+
+    <!-- Job Categories -->
+    <section class="pt-10 pb-24">
+      <div class="flex flex-col items-center gap-8">
+        <h1 class="text-center font-bold text-4xl">Job categories</h1>
+        <hr class="w-10/12 -mt-5 mx-auto text-[#959CA0]" />
+
+        <div
+          class="flex flex-wrap items-center justify-center md:justify-start gap-8 max-w-[1200px]"
+        >
+          <a
+            href=""
+            class="flex flex-col gap-3 border border-gray-200 shadow-lg py-5 px-10 rounded-lg w-[280px] hover:bg-gray-100"
+          >
+            <img src="/icons/coding.svg" class="size-20" />
+            <p class="text-lg font-semibold">Software Development</p>
+            <span class="text-[#3178c6]">10 Vacancy</span>
+          </a>
+
+          <a
+            href=""
+            class="flex flex-col gap-3 border border-gray-200 shadow-lg py-5 px-10 rounded-lg w-[280px] hover:bg-gray-100"
+          >
+            <img src="/icons/copy-image.svg" class="size-20" />
+            <p class="text-lg font-semibold">Graphics & Design</p>
+            <span class="text-[#3178c6]">18 Vacancy</span>
+          </a>
+
+          <a
+            href=""
+            class="flex flex-col gap-3 border border-gray-200 shadow-lg py-5 px-10 rounded-lg w-[280px] hover:bg-gray-100"
+          >
+            <img src="/icons/ad-paid.svg" class="size-20" />
+            <p class="text-lg font-semibold">Sales & Marketing</p>
+            <span class="text-[#3178c6]">8 Vacancy</span>
+          </a>
+
+          <a
+            href=""
+            class="flex flex-col gap-3 border border-gray-200 shadow-lg py-5 px-10 rounded-lg w-[280px] hover:bg-gray-100"
+          >
+            <img src="/icons/industry-alt.svg" class="size-20" />
+            <p class="text-lg font-semibold">Manufacturing</p>
+            <span class="text-[#3178c6]">25 Vacancy</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Job Categories End-->
+
+    <footer class="bg-[#2B3940] py-5 w-full">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row flex-wrap items-start justify-center md:justify-between text-white py-8 gap-8"
+        >
+          <!-- Company Information -->
+          <div class="flex flex-col justify-items-start gap-1 w-full md:w-auto">
+            <h1 class="text-2xl font-semibold mb-3">CenterJobs</h1>
+            <a
+              href=""
+              class="font-semibold text-[#959CA0] flex items-center gap-1 hover:text-white transition-colors"
+            >
+              <img
+                src="/icons/angle-small-right.svg"
+                class="size-4"
+                alt="angle icon"
+              />About us
+            </a>
+            <a
+              href=""
+              class="font-semibold text-[#959CA0] flex items-center gap-1 hover:text-white transition-colors"
+            >
+              <img
+                src="/icons/angle-small-right.svg"
+                class="size-4"
+                alt="angle icon"
+              />Contact us
+            </a>
+            <a
+              href=""
+              class="font-semibold text-[#959CA0] flex items-center gap-1 hover:text-white transition-colors"
+            >
+              <img
+                src="/icons/angle-small-right.svg"
+                class="size-4"
+                alt="angle icon"
+              />Privacy Policy
+            </a>
+            <a
+              href=""
+              class="font-semibold text-[#959CA0] flex items-center gap-1 hover:text-white transition-colors"
+            >
+              <img
+                src="/icons/angle-small-right.svg"
+                class="size-4"
+                alt="angle icon"
+              />Terms & Condition
+            </a>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="flex flex-col justify-items-start gap-1 w-full md:w-auto">
+            <h1 class="text-2xl font-semibold mb-3">Contact</h1>
+            <p class="text-[#959CA0] flex items-center gap-1">
+              <img
+                src="/icons/marker.svg"
+                class="size-4"
+                alt="location icon"
+              />Jl Jatimulya Raya, Jatimulya 17510
+            </p>
+            <p class="text-[#959CA0] flex items-center gap-1">
+              <img
+                src="/icons/phone-flip.svg"
+                class="size-4"
+                alt="phone icon"
+              />+62881XXXXXXXXX
+            </p>
+            <p class="text-[#959CA0] flex items-center gap-1">
+              <img
+                src="/icons/envelope.svg"
+                class="size-4"
+                alt="envelope icon"
+              />jobvacancy@email.com
+            </p>
+            <div class="flex items-center gap-2 mt-3">
+              <a
+                class="border border-[#959CA0] p-2 hover:bg-white hover:text-[#2B3940] transition-colors cursor-pointer rounded"
+              >
+                <img
+                  src="/icons/instagram.svg"
+                  class="size-5"
+                  alt="instagram icon"
+                />
+              </a>
+              <a
+                class="border border-[#959CA0] p-2 hover:bg-white hover:text-[#2B3940] transition-colors cursor-pointer rounded"
+              >
+                <img
+                  src="/icons/facebook.svg"
+                  class="size-5"
+                  alt="facebook icon"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Subscribe Form -->
+          <div
+            class="flex flex-col justify-items-start gap-1 w-full md:w-auto max-w-xs"
+          >
+            <h1 class="text-2xl font-semibold">Subscribe</h1>
+            <p class="text-[#959CA0]">Subscribe to our newsletter!</p>
+            <div
+              class="flex flex-col md:flex-row border border-[#959CA0] p-2 focus-within:shadow-[0_0_10px_2px_#3178c6] rounded-md w-full"
+            >
+              <input
+                type="email"
+                placeholder="Your email"
+                class="p-2 focus:outline-none bg-transparent text-white w-full"
+              />
+              <button
+                class="py-2 px-4 bg-[#3178c6] rounded-md cursor-pointer hover:bg-[#235a97] sm:mt-0 w-full md:w-auto"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <hr class="w-10/12 mx-auto text-[#959CA0] my-4" />
+
+        <div class="text-center py-3">
+          <span class="block text-[#959CA0]">
+            &copy;2025
+            <a
+              href="/"
+              class="text-white hover:text-[#3178c6] transition-colors"
+              >CenterJobs</a
+            >, All Right Reserved.
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
